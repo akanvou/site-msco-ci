@@ -1,0 +1,135 @@
+/*.categories-container {
+    display: flex; /* Affiche les catégories en ligne */
+    /*justify-content: space-between; /* Répartit l'espace entre elles */
+   /* gap: 20px;
+    width: 100%;
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+    /*padding: 20px 0;
+}
+
+.category {
+    flex: 1; /* Chaque catégorie prend un espace égal */
+   /* min-width: 45%; /* Pour s'assurer qu'il y a assez de place */
+/*}
+
+h2 {
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-container {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.product {
+    flex: 0 0 calc(100% / 3 - 10px); /* Affiche 3 produits à la fois */
+    /*text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+*/
+
+
+.card-wrapper{
+    max-width: 1100px;
+    max-height: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+.card-list .card-item{
+    list-style: none;
+}
+.card-list .card-item .card-link {
+   user-select: none;
+   display: block;
+   background: #8f8d8d;
+   padding: 18px;
+   border-radius: 20px;
+   text-decoration: none;
+   box-shadow: 0 10px 10px rgba(226, 4, 4, 0);
+   transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+
+.card-list .card-link .card-image{
+    width: 85%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+    color: #741404;
+    padding: 8px 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #535353;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color:black;
+    font-weight: 600;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #535353 ;
+}
+
+.card-wrapper .swiper-pagination-bullet-active{
+    opacity: 2;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #741404;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}

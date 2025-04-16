@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <title>Attiéké déshydraté</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-icon" aria-label="visit homepage" aria-current="page">
+          <img src="image/logo.jpeg" alt="msco-ci" width="50px" height="50px">
+          <span>M.Sales Company</span>
+        </a>
+  
+        <div class="main-navlinks">
+          <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+          <div class="navlinks-container">
+            <ul>
+             <li class="active"><a href="index.html" aria-current="page">Acceuil</a></li>
+              <li><a href="#">Société</a></li>
+                    <li class="sousmenu"><a href="#" >Produits</a>
+                        <ul class="sousnav">
+                        <li><a href="Attiéké déshydraté.html">Attiéké Déshydraté</a></li>
+                        <li><a href="Farines.html">Farines</a></li>
+                        <li><a href="Foutou.html">Foutou</a></li>
+                        <li><a href="Sauces.html">Sauces</a></li>
+                        <li><a href="Friandises.html">Friandises</a></li>
+                        </ul>
+                    
+                    </li> 
+             <li><a href="#">Services</a></li>
+             <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+           <div class="nav-authentication">
+              <a href="#" class="sign-user" aria-label="Sign in page">
+                <img src="image/user.svg" alt="user-icon">                
+              </a>
+              <div class="social-share">
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="image/logo-de-lapplication-facebook.png" alt="">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="image/instagram(1).png" alt="">
+                </a>
+                <a href="#" class="social-icon" target="_blank">
+                    <img src="image/WhatsApp1.png" alt="">
+                </a>
+                    <div class="cart-icon">
+                        <!-- Image du panier -->
+                          <a href="checkout.html" class="social-icon">
+                            <img src="image/chariot1.png" alt="Panier" title="Voir le panier" id="cart-icon">
+                          </a>
+                          <span id="cart-count">0</span>
+                      </div>
+              </div>
+        </div>
+      </nav>
+      <main>
+    <div class="wraperch">
+    
+       <h1 class="basket">Mon Panier</h1>
+
+        <div id="cart-container">
+            <div id="cart-items">
+                <!-- Articles du panier -->
+            </div>
+            <p id="cart-total">Total : 0 Fr</p>
+          <button id="checkout-btn">Finaliser la commande</button>
+            <button id="back-to-shop-btn">Annuler la commande</button>
+        </div>
+    
+      <div class="paie">
+        <div class="checkout-container">
+          <h1>Finalisation de la commande</h1>
+          <div class="order-summary">
+            <div id="payment-section">
+                <div id="order-summary"></div>
+                <h3 id="total-price">Total : 0 Fr</h3>
+            </div>
+            
+          </div>
+  
+          <div class="payment-options">
+              <h2>Choisissez votre mode de paiement</h2>
+              <label>
+                  <input type="radio" name="payment-method" value="card" checked>
+                  Paiement par carte
+              </label>
+              <label>
+                  <input type="radio" name="payment-method" value="mobile">
+                  Paiement via réseau mobile
+              </label>
+          </div>
+  
+          <!-- Formulaire de paiement par carte -->
+          <form id="card-payment" class="payment-method">
+              <h3>Paiement par carte</h3>
+              <label for="card-number">Numéro de carte :</label>
+              <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+  
+              <label for="expiry-date">Date d'expiration :</label>
+              <input type="text" id="expiry-date" placeholder="MM/AA" required>
+  
+              <label for="cvv">CVV :</label>
+              <input type="text" id="cvv" placeholder="123" required>
+  
+              <button id="pay-now-btn" type="submit">Payer maintenant</button>
+          </form>
+  
+          <!-- Formulaire de paiement via réseau mobile -->
+          <form id="mobile-payment" class="payment-method hidden">
+              <h3>Paiement via réseau mobile</h3>
+              <label for="mobile-network">Choisissez un réseau :</label>
+              <select id="mobile-network" required>
+                  <option value="">-- Sélectionnez un réseau --</option>
+                  <option value="orange-money">Orange Money</option>
+                  <option value="mtn-money">MTN Mobile Money</option>
+                  <option value="wave">Wave</option>
+              </select>
+  
+              <label for="mobile-number">Numéro de téléphone :</label>
+              <input type="text" id="mobile-number" placeholder="Ex : 0123456789" required>
+  
+              <button id="pay-now-btn" type="submit">Payer maintenant</button>
+          </form>
+    </div>
+</main>
+    <script src="panier.js"></script>
+    <script src="https://cdn.cinetpay.com/seamless/main.js"></script>
+</body>
+</html>
